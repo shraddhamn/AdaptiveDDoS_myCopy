@@ -2,8 +2,8 @@ package main
 
 import (
 	"os"
-    "github.com/patrickmn/go-cache"
-	"github.com/golang-collections/go-datastructures/fifo"
+    "../helper/go-cache"
+	"../helper/fifo"
 
 	// "fmt"
 	"encoding/json"
