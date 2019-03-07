@@ -1,0 +1,162 @@
+2018-12-01 19:59:32,983 - statsLogger - INFO - STATS FOR WINDOW 0 - START
+2018-12-01 19:59:32,983 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 19:59:32,984 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 19:59:32,984 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 19:59:32,986 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 19:59:32,987 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 19:59:32,988 - statsLogger - INFO - STATS FOR WINDOW 1 - END 
+
+
+2018-12-01 19:59:37,989 - statsLogger - INFO - STATS FOR WINDOW 1 - START
+2018-12-01 19:59:37,990 - statsLogger - INFO - Total Traffic at Ingress 0 = 49
+2018-12-01 19:59:37,990 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 19:59:37,990 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 19:59:37,990 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 19:59:37,991 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 19:59:37,991 - statsLogger - INFO - STATS FOR WINDOW 2 - END 
+
+
+2018-12-01 19:59:42,997 - statsLogger - INFO - STATS FOR WINDOW 2 - START
+2018-12-01 19:59:42,997 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 19:59:42,997 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 19:59:42,998 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 19:59:42,998 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 19:59:42,998 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 19:59:42,998 - statsLogger - INFO - STATS FOR WINDOW 3 - END 
+
+
+2018-12-01 19:59:47,999 - statsLogger - INFO - STATS FOR WINDOW 3 - START
+2018-12-01 19:59:47,999 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 19:59:47,999 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 19:59:48,000 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 19:59:48,000 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 19:59:48,000 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 19:59:48,000 - statsLogger - INFO - STATS FOR WINDOW 4 - END 
+
+
+2018-12-01 19:59:53,002 - statsLogger - INFO - STATS FOR WINDOW 4 - START
+2018-12-01 19:59:53,002 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 19:59:53,003 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 19:59:53,003 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 19:59:53,003 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 19:59:53,003 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 19:59:53,003 - statsLogger - INFO - STATS FOR WINDOW 5 - END 
+
+
+2018-12-01 19:59:58,005 - statsLogger - INFO - STATS FOR WINDOW 5 - START
+2018-12-01 19:59:58,006 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 19:59:58,006 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 19:59:58,006 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 19:59:58,006 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 19:59:58,006 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 19:59:58,006 - statsLogger - INFO - STATS FOR WINDOW 6 - END 
+
+
+2018-12-01 20:00:03,006 - statsLogger - INFO - STATS FOR WINDOW 6 - START
+2018-12-01 20:00:03,007 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 20:00:03,007 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:03,007 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:03,007 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:03,008 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:03,008 - statsLogger - INFO - STATS FOR WINDOW 7 - END 
+
+
+2018-12-01 20:00:08,009 - statsLogger - INFO - STATS FOR WINDOW 7 - START
+2018-12-01 20:00:08,009 - statsLogger - INFO - Total Traffic at Ingress 0 = 49
+2018-12-01 20:00:08,009 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:08,009 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:08,009 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:08,010 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:08,010 - statsLogger - INFO - STATS FOR WINDOW 8 - END 
+
+
+2018-12-01 20:00:13,010 - statsLogger - INFO - STATS FOR WINDOW 8 - START
+2018-12-01 20:00:13,010 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 20:00:13,011 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:13,011 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:13,011 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:13,012 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:13,012 - statsLogger - INFO - STATS FOR WINDOW 9 - END 
+
+
+2018-12-01 20:00:18,012 - statsLogger - INFO - STATS FOR WINDOW 9 - START
+2018-12-01 20:00:18,013 - statsLogger - INFO - Total Traffic at Ingress 0 = 49
+2018-12-01 20:00:18,013 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:18,013 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:18,013 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:18,013 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:18,014 - statsLogger - INFO - STATS FOR WINDOW 10 - END 
+
+
+2018-12-01 20:00:23,015 - statsLogger - INFO - STATS FOR WINDOW 10 - START
+2018-12-01 20:00:23,015 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 20:00:23,015 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:23,016 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:23,016 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:23,016 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:23,016 - statsLogger - INFO - STATS FOR WINDOW 11 - END 
+
+
+2018-12-01 20:00:28,019 - statsLogger - INFO - STATS FOR WINDOW 11 - START
+2018-12-01 20:00:28,020 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 20:00:28,020 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:28,021 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:28,021 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:28,021 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:28,021 - statsLogger - INFO - STATS FOR WINDOW 12 - END 
+
+
+2018-12-01 20:00:33,027 - statsLogger - INFO - STATS FOR WINDOW 12 - START
+2018-12-01 20:00:33,033 - statsLogger - INFO - Total Traffic at Ingress 0 = 49
+2018-12-01 20:00:33,039 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:33,042 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:33,042 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:33,043 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:33,043 - statsLogger - INFO - STATS FOR WINDOW 13 - END 
+
+
+2018-12-01 20:00:38,046 - statsLogger - INFO - STATS FOR WINDOW 13 - START
+2018-12-01 20:00:38,046 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 20:00:38,047 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:38,047 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:38,048 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:38,048 - statsLogger - INFO - Wasted resources at ingress 0 = 9996.0 Mbps
+2018-12-01 20:00:38,048 - statsLogger - INFO - STATS FOR WINDOW 14 - END 
+
+
+2018-12-01 20:00:43,052 - statsLogger - INFO - STATS FOR WINDOW 14 - START
+2018-12-01 20:00:43,052 - statsLogger - INFO - Total Traffic at Ingress 0 = 49
+2018-12-01 20:00:43,053 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:43,053 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:43,053 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:43,053 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:43,054 - statsLogger - INFO - STATS FOR WINDOW 15 - END 
+
+
+2018-12-01 20:00:48,056 - statsLogger - INFO - STATS FOR WINDOW 15 - START
+2018-12-01 20:00:48,056 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 20:00:48,056 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:48,057 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:48,058 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:48,059 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:48,059 - statsLogger - INFO - STATS FOR WINDOW 16 - END 
+
+
+2018-12-01 20:00:53,060 - statsLogger - INFO - STATS FOR WINDOW 16 - START
+2018-12-01 20:00:53,060 - statsLogger - INFO - Total Traffic at Ingress 0 = 49
+2018-12-01 20:00:53,060 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:53,060 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:53,061 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:53,061 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:53,061 - statsLogger - INFO - STATS FOR WINDOW 17 - END 
+
+
+2018-12-01 20:00:58,062 - statsLogger - INFO - STATS FOR WINDOW 17 - START
+2018-12-01 20:00:58,062 - statsLogger - INFO - Total Traffic at Ingress 0 = 48
+2018-12-01 20:00:58,062 - statsLogger - INFO - Total UDP Flood at Ingress 0 = 0
+2018-12-01 20:00:58,062 - statsLogger - INFO - Total TCP Syn at Ingress 0 = 0
+2018-12-01 20:00:58,062 - statsLogger - INFO - Dropped Packets at ingress 0 = 0
+2018-12-01 20:00:58,062 - statsLogger - INFO - Wasted resources at ingress 0 = 9995.0 Mbps
+2018-12-01 20:00:58,063 - statsLogger - INFO - STATS FOR WINDOW 18 - END 
+
+

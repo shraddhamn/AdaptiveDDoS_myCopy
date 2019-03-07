@@ -1,0 +1,51 @@
+2018-12-01 20:04:47,698 - debugLogger - DEBUG - Hello from main
+2018-12-01 20:04:47,706 - debugLogger - DEBUG - Reading configuration file
+2018-12-01 20:04:47,776 - debugLogger - DEBUG - Processing delay = 0.1 seconds
+2018-12-01 20:04:47,776 - debugLogger - DEBUG - Initialize traffic stats data structures in ISP
+2018-12-01 20:04:47,778 - debugLogger - DEBUG - Function: initializeISP- Initializing TRAFFIC_STATS variables
+2018-12-01 20:04:47,780 - debugLogger - DEBUG - Initialize capacity of ingress locations depending on the defense type
+2018-12-01 20:04:47,782 - debugLogger - DEBUG - Function: initializeAdaptive - Initialize inital capapcity of ingress locations
+2018-12-01 20:04:47,783 - debugLogger - DEBUG - Start legitimate traffic thread
+2018-12-01 20:04:47,785 - debugLogger - DEBUG - Start attack traffic thread
+2018-12-01 20:04:47,786 - debugLogger - DEBUG - Function: flowGenSimple - Number of packets to send in 1 second 1
+2018-12-01 20:04:47,786 - debugLogger - DEBUG - Start stats collection thread
+2018-12-01 20:04:47,789 - debugLogger - DEBUG - Start packet processing thread
+2018-12-01 20:04:47,789 - debugLogger - DEBUG - Hello from thread stats per epoch collection thread
+2018-12-01 20:04:47,789 - debugLogger - DEBUG - Processing delay = 0.1 seconds
+2018-12-01 20:04:47,789 - debugLogger - DEBUG - Thread repeat time = 10
+2018-12-01 20:04:47,792 - debugLogger - DEBUG - Hello from thread packet processingThread
+2018-12-01 20:04:47,795 - debugLogger - DEBUG - Thread repeat time = 0.1
+2018-12-01 20:04:47,901 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 1, 'tcp_syn': 0}
+2018-12-01 20:04:48,789 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 2, 'tcp_syn': 0}
+2018-12-01 20:04:49,790 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 3, 'tcp_syn': 0}
+2018-12-01 20:04:50,792 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 4, 'tcp_syn': 0}
+2018-12-01 20:04:51,796 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 5, 'tcp_syn': 0}
+2018-12-01 20:04:52,798 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 6, 'tcp_syn': 0}
+2018-12-01 20:04:53,801 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 7, 'tcp_syn': 0}
+2018-12-01 20:04:54,805 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 8, 'tcp_syn': 0}
+2018-12-01 20:04:55,811 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 9, 'tcp_syn': 0}
+2018-12-01 20:04:56,815 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 10, 'tcp_syn': 0}
+2018-12-01 20:04:57,816 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 1, 'tcp_syn': 0}
+2018-12-01 20:04:58,818 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 2, 'tcp_syn': 0}
+2018-12-01 20:04:59,821 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 3, 'tcp_syn': 0}
+2018-12-01 20:05:00,826 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 4, 'tcp_syn': 0}
+2018-12-01 20:05:01,828 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 5, 'tcp_syn': 0}
+2018-12-01 20:05:02,828 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 6, 'tcp_syn': 0}
+2018-12-01 20:05:03,835 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 7, 'tcp_syn': 0}
+2018-12-01 20:05:04,838 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 8, 'tcp_syn': 0}
+2018-12-01 20:05:05,842 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 9, 'tcp_syn': 0}
+2018-12-01 20:05:06,844 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 10, 'tcp_syn': 0}
+2018-12-01 20:05:07,845 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 1, 'tcp_syn': 0}
+2018-12-01 20:05:08,848 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 2, 'tcp_syn': 0}
+2018-12-01 20:05:09,851 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 3, 'tcp_syn': 0}
+2018-12-01 20:05:10,857 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 4, 'tcp_syn': 0}
+2018-12-01 20:05:11,858 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 5, 'tcp_syn': 0}
+2018-12-01 20:05:12,865 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 6, 'tcp_syn': 0}
+2018-12-01 20:05:13,868 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 7, 'tcp_syn': 0}
+2018-12-01 20:05:14,874 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 8, 'tcp_syn': 0}
+2018-12-01 20:05:15,877 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 9, 'tcp_syn': 0}
+2018-12-01 20:05:16,877 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 10, 'tcp_syn': 0}
+2018-12-01 20:05:17,878 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 1, 'tcp_syn': 0}
+2018-12-01 20:05:18,881 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 2, 'tcp_syn': 0}
+2018-12-01 20:05:19,884 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 3, 'tcp_syn': 0}
+2018-12-01 20:05:20,885 - debugLogger - DEBUG - Function: processPacket - after diagnose {'udp_flood': 0, 'total': 4, 'tcp_syn': 0}
