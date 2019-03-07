@@ -1,0 +1,13 @@
+{
+  "attackerType": "randMix",
+  "defenseType": "adaptive",
+  "ingreeLoc": 10,
+  "buffSize": 1,
+  "VMCapacity": 0.1,
+  "ISPCapacity": 2,
+  "numNICsVM": 1, 
+  "attackerCapacity": 0.3,
+  "legitimateTraffic": "simple",
+  "epochTime": 5,
+  "processingDelay": 1
+}
