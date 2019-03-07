@@ -2,8 +2,7 @@ package main
 
 import (
 	"os"
-
-	"github.com/golang-collections/go-datastructures/fifo"
+	"../helper/fifo"
 
 	// "fmt"
 	"encoding/json"

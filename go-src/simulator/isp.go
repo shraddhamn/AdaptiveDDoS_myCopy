@@ -1,6 +1,6 @@
 package main
 
-import "github.com/golang-collections/go-datastructures/fifo"
+import "../helper/fifo"
 import (
 	"math"
 )
