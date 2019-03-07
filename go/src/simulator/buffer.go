@@ -2,6 +2,9 @@ package main
 
 import (
 	"math"
+	"time"
+	"fmt"
+	
 )
 
 func enqueuePacket(pkt packet) {
@@ -61,6 +64,31 @@ func dropPacket(pkt packet) {
 // }
 
 func processPacket() {
+
+    if BACKLOG==256{
+        fmt.Println("Backlog Full")  
+    }
+    
+    s:=time.Now()
+    s.Add(time.Second*5)
+    backlog[BACKLOG]=s.String()
+    BACKLOG+=1
+    
+    st:=time.Now()
+    for i:=0; i< BACKLOG; i++{
+    
+        times=st.String()        
+        if (times==backlog[BACKLOG]){
+        
+            for j:=i; j<BACKLOG-1; j++{
+                backlog[j]=backlog[j+1]
+            }
+            
+            BACKLOG-=1
+        }
+   
+     }
+    
 
 	for i := 0; i < CONFIGURATION.INGRESS_LOC; i++ {
 		// # LOCK_RECEIVE_COUNTER[i].Lock()

@@ -13,6 +13,7 @@ import (
 var (
 	CONFIGURATION      Config
 	CURR_TRAFFIC_STATS []map[string]int
+	backlog [256]string
 	// PREV_TRAFFIC_STATS []map[string]int
 	PEAK_TRAFFIC []float64
 	MIN_TRAFFIC  []float64
@@ -29,6 +30,9 @@ var (
 	DNS_AMP_DETECT_ACCURACY float64 = 0.9
 	EPOCH_TIME                      = 5.0
 	WINDOW_COUNTER          int
+    BACKLOG int = 0
+    times string
+    
 )
 
 func main() {

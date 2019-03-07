@@ -71,7 +71,9 @@ func staticMitigation() {
 		LOCK_CURR_TRAFFIC_STATS[i].Lock()
 
 		AVG_TRAFFIC[i] = (AVG_TRAFFIC[i]*float64(WINDOW_COUNTER) + float64(CURR_TRAFFIC_STATS[i]["total"])) / (float64(WINDOW_COUNTER) + 1.0)
-		perSec := (AVG_TRAFFIC[i] / CONFIGURATION.EPOCH_TIME) * PKT_LEN
+		// perSec := (AVG_TRAFFIC[i] / CONFIGURATION.EPOCH_TIME) * PKT_LEN
+		perSec_tcp := ((AVG_TRAFFIC[i] / CONFIGURATION.EPOCH_TIME) * PKT_LEN)/float64(CURR_TRAFFIC_STATS[i]["tcp_syn"])
+		perSec_udp := ((AVG_TRAFFIC[i] / CONFIGURATION.EPOCH_TIME) * PKT_LEN)/float64(CURR_TRAFFIC_STATS[i]["udp_flood"])
 		// if (float64(CURR_TRAFFIC_STATS[i]["total"]))*PKT_LEN > PEAK_TRAFFIC[i] {
 		// 	PEAK_TRAFFIC[i] = float64(CURR_TRAFFIC_STATS[i]["total"]) * PKT_LEN
 		// }
@@ -82,7 +84,8 @@ func staticMitigation() {
 
 		LOCK_CURR_TRAFFIC_STATS[i].Unlock()
 		// # INGRESS_CAP[i] = random.uniform(MIN_TRAFFIC[i],PEAK_TRAFFIC[i])
-		changeCapacity(i, perSec)
+		changeCapacity(i, perSec_tcp)
+		changeCapacity(i, perSec_udp)
 
 	}
 }
