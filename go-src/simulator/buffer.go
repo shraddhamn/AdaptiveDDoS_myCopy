@@ -39,29 +39,46 @@ func dropPacket(pkt packet) {
 }
 
 func addToBacklog(pkt packet) {
+
 	if CONN_IN_BACKLOG == 256 {
 		fmt.Println("Backlog Full")
 		dropPacket(pkt)
 	} else {
-		s := time.Now()
-		s.Add(time.Second * 5)
-		BACKLOG[CONN_IN_BACKLOG] = s.String()
-		CONN_IN_BACKLOG += 1
+	
+	Backlog_Queue.Add(pkt.src,1,cache.DefaultExpiration)
+	
+    }
+ }
+	
+	
+	
+func RemovefromBacklog(pkt packet)
+{
+    	Backlog_Queue.Delete(pkt.src)
+}
+	
+	
+	
+	
+//		s := time.Now()
+//		s.Add(time.Second * 5)
+//		BACKLOG[CONN_IN_BACKLOG] = s.String()
+//		CONN_IN_BACKLOG += 1
 
-		st := time.Now()
-		for i := 0; i < CONN_IN_BACKLOG; i++ {
+//		st := time.Now()
+//		for i := 0; i < CONN_IN_BACKLOG; i++ {
 
-			times = st.String()
-			if times == BACKLOG[CONN_IN_BACKLOG] {
+//			times = st.String()
+//			if times == BACKLOG[CONN_IN_BACKLOG] {
 
-				for j := i; j < CONN_IN_BACKLOG-1; j++ {
-					BACKLOG[j] = BACKLOG[j+1]
-				}
+//				for j := i; j < CONN_IN_BACKLOG-1; j++ {
+//					BACKLOG[j] = BACKLOG[j+1]
+	//			}
 
-				CONN_IN_BACKLOG -= 1
-			}
+//				CONN_IN_BACKLOG -= 1
+		//	}
 
-		}
+//		}
 	}
 }
 
@@ -78,6 +95,8 @@ func processPacket() {
 			var pkt packet = dequeue(i)
 			if pkt.synFlag == 1 {
 				addToBacklog(pkt)
+			} else if pkt.ackFlag == 1 {
+    			RemoveFromBacklog(pkt)
 			}
 			go diagnose(pkt)
 			bitsToDequeue -= int(pkt.packet_len)
