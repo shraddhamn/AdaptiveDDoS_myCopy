@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
-	"time"
+	"../helper/go-cache"
+	// "time"
 )
 
 func enqueuePacket(pkt packet) {
@@ -45,42 +46,19 @@ func addToBacklog(pkt packet) {
 		dropPacket(pkt)
 	} else {
 	
-	Backlog_Queue.Add(pkt.src,1,cache.DefaultExpiration)
+	Backlog_Queue[pkt.ingress].Add(pkt.src,1,cache.DefaultExpiration)
 	
     }
  }
 	
 	
 	
-func RemovefromBacklog(pkt packet)
-{
-    	Backlog_Queue.Delete(pkt.src)
+func RemoveFromBacklog(pkt packet) {
+    Backlog_Queue[pkt.ingress].Delete(pkt.src)
 }
 	
 	
-	
-	
-//		s := time.Now()
-//		s.Add(time.Second * 5)
-//		BACKLOG[CONN_IN_BACKLOG] = s.String()
-//		CONN_IN_BACKLOG += 1
 
-//		st := time.Now()
-//		for i := 0; i < CONN_IN_BACKLOG; i++ {
-
-//			times = st.String()
-//			if times == BACKLOG[CONN_IN_BACKLOG] {
-
-//				for j := i; j < CONN_IN_BACKLOG-1; j++ {
-//					BACKLOG[j] = BACKLOG[j+1]
-	//			}
-
-//				CONN_IN_BACKLOG -= 1
-		//	}
-
-//		}
-	}
-}
 
 func processPacket() {
 

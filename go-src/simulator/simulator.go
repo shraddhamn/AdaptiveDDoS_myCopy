@@ -26,7 +26,8 @@ var (
 	// processCounter []int
 	// BUFFER []*fifo.Queue
 	pktQueue []*fifo.Queue
-    Backlog_Queue := cache.New(5*time.Second, 5*time.Second)
+	Backlog_Queue []*cache.Cache
+   
 	BACKLOG [TOTAL_BACKLOG_SIZE]string // array to store pkts
 
 	NUM_VMs                 []int
