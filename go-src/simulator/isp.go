@@ -35,9 +35,9 @@ func initializeISP() {
 		var m map[string]int
 		m = make(map[string]int)
 		m["total"] = 0
-		m["udp_flood"] = 0
-		m["tcp_syn"] = 0
-		m["dns_amp"] = 0
+		m["UDP_FLOOD"] = 0
+		m["TCP_SYN"] = 0
+		m["DNS_AMP"] = 0
 		CURR_TRAFFIC_STATS = append(CURR_TRAFFIC_STATS, m)
 		MIN_TRAFFIC[i] = math.Inf(0)
 		pktQueue = append(pktQueue, fifo.NewQueue())
@@ -76,17 +76,21 @@ func wastedResources(total []map[string]int) {
 
 		// prevReceiveCount[i] = total[i]["total"]
 		// LOCK_RECEIVE_COUNTER[i].Unlock()
-		LOCK_CURR_TRAFFIC_STATS[i].Lock()
-		receivedPktsPerWIndow := total[i]["total"]
-		LOCK_CURR_TRAFFIC_STATS[i].Unlock()
+		
 		LOCK_INGRESS_CAP[i].Lock()
 
-		wastedCap := INGRESS_CAP[i].cap - (float64(receivedPktsPerWIndow) * PKT_LEN / CONFIGURATION.EPOCH_TIME)
-		LOCK_INGRESS_CAP[i].Unlock()
-		// fmt.Printf("%f",wastedCap)
+		for _, element := range ATTACK_TYPES {
+			LOCK_CURR_TRAFFIC_STATS[i].Lock()
+			receivedPktsPerWIndow := total[i][element]
+			LOCK_CURR_TRAFFIC_STATS[i].Unlock()
+			wastedCap := INGRESS_CAP[i][element].cap - (float64(receivedPktsPerWIndow) * PKT_LEN / CONFIGURATION.EPOCH_TIME)
+			
+			// fmt.Printf("%f",wastedCap)
 
-		// _DEBUG.Printf("Function: wastedResources, wasted resources at ingress %d = %v Mbps",i, wastedCap)
-		_INFO.Printf("Wasted_resources_Mbps %v ingress %d", wastedCap, i)
+			// _DEBUG.Printf("Function: wastedResources, wasted resources at ingress %d = %v Mbps",i, wastedCap)
+			_INFO.Printf("Wasted_resources_Mbps %v ingress %d attackType %s", wastedCap, i, element)
+		}
+		LOCK_INGRESS_CAP[i].Unlock()
 
 		// #
 

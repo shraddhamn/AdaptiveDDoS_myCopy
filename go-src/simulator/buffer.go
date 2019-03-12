@@ -10,9 +10,17 @@ import (
 func enqueuePacket(pkt packet) {
 
 	LOCK_INGRESS_CAP[pkt.ingress].Lock()
-	if (INGRESS_CAP[pkt.ingress].availableBuffSpace - pkt.packet_len) > 0 {
+	var attackType string
+	if(pkt.protocol == "udp") {
+		attackType = "UDP_FLOOD"
+	} else if(pkt.protocol == "tcp") {
+		attackType = "TCP_SYN"
+	} else {
+		attackType = "DNS_AMP"
+	}
+	if (INGRESS_CAP[pkt.ingress][attackType].availableBuffSpace - pkt.packet_len) > 0 {
 
-		INGRESS_CAP[pkt.ingress].availableBuffSpace -= pkt.packet_len
+		INGRESS_CAP[pkt.ingress][attackType].availableBuffSpace -= pkt.packet_len
 		// _DEBUG.Printf("Function: enqueuePacket - Packet Added to Queue, Available Buffer space at %d = %f", pkt.ingress, INGRESS_CAP[pkt.ingress].availableBuffSpace)
 		enqueue(pkt, pkt.ingress)
 		LOCK_INGRESS_CAP[pkt.ingress].Unlock()
@@ -60,14 +68,16 @@ func RemoveFromBacklog(pkt packet) {
 	
 
 
-func processPacket() {
+
+
+func processPacket(attackType string) {
 
 	for i := 0; i < CONFIGURATION.INGRESS_LOC; i++ {
 
 		LOCK_INGRESS_CAP[i].Lock()
 
 		//pktsToDequeue := int(math.Ceil((INGRESS_CAP[i].vmQueue - INGRESS_CAP[i].availableBuffSpace) / PKT_LEN))
-		bitsToDequeue := int(math.Ceil((INGRESS_CAP[i].vmQueue - INGRESS_CAP[i].availableBuffSpace)))
+		bitsToDequeue := int(math.Ceil((INGRESS_CAP[i][attackType].vmQueue - INGRESS_CAP[i][attackType].availableBuffSpace)))
 
 		for bitsToDequeue >= 0 {
 			var pkt packet = dequeue(i)
@@ -80,7 +90,7 @@ func processPacket() {
 			bitsToDequeue -= int(pkt.packet_len)
 		}
 
-		INGRESS_CAP[i].availableBuffSpace += (float64(bitsToDequeue))
+		INGRESS_CAP[i][attackType].availableBuffSpace += (float64(bitsToDequeue))
 
 		LOCK_INGRESS_CAP[i].Unlock()
 

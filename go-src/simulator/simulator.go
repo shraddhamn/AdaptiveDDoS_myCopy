@@ -27,11 +27,11 @@ var (
 	// BUFFER []*fifo.Queue
 	pktQueue []*fifo.Queue
 	Backlog_Queue []*cache.Cache
-   
+	ATTACK_TYPES [3]string
 	BACKLOG [TOTAL_BACKLOG_SIZE]string // array to store pkts
 
-	NUM_VMs                 []int
-	INGRESS_CAP             []*VM
+	NUM_VMs                 []map[string]int
+	INGRESS_CAP             []map[string]*VM
 	PKT_LEN                 float64 = 100.0 * 8 / 1000000
 	UDP_DETECT_ACCURACY     float64 = 0.9
 	TCP_SYN_DETECT_ACCURACY float64 = 0.9
@@ -42,12 +42,16 @@ var (
 	times                   string
 )
 
+
 func main() {
 
 	runtime.GOMAXPROCS(4)
 	if len(os.Args) < 2 {
 		log.Fatal("PLEASE ENTER FILENAME FOR CONFIG")
 	}
+	ATTACK_TYPES[0] = "UDP_FLOOD"
+	ATTACK_TYPES[1] = "TCP_SYN"
+	ATTACK_TYPES[2] = "DNS_AMP"
 	var configurationFile string = os.Args[1]
 	_DEBUG.Println("Hello from main")
 
@@ -88,7 +92,9 @@ func main() {
 	for {
 		select {
 		case <-processTicker.C:
-			go processPacket()
+			go processPacket("UDP_FLOOD")
+			go processPacket("TCP_SYN")
+			go processPacket("DNS_AMP")
 		case <-statsTicker.C:
 			go collectStats()
 		}

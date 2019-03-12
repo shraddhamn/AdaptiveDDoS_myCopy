@@ -5,25 +5,24 @@ import (
 	"math/rand"
 )
 
-// func bohatei()
-func changeCapacity(i int, newCap float64) {
-	NUM_VMs[i] = int(math.Floor(newCap * 1.0 / CONFIGURATION.VM_COMPUTE_CAP))
-	if NUM_VMs[i] == 0 {
-		NUM_VMs[i] = 1
+func changeCapacity(i int, newCap float64, attackType string) {
+	NUM_VMs[i][attackType] = int(math.Floor(newCap * 1.0 / CONFIGURATION.VM_COMPUTE_CAP))
+	if NUM_VMs[i][attackType] == 0 {
+		NUM_VMs[i][attackType] = 1
 	}
 	LOCK_INGRESS_CAP[i].Lock()
 	// oldCap := INGRESS_CAP[i].cap
-	INGRESS_CAP[i].cap = float64(NUM_VMs[i]) * CONFIGURATION.VM_COMPUTE_CAP
+	INGRESS_CAP[i][attackType].cap = float64(NUM_VMs[i][attackType]) * CONFIGURATION.VM_COMPUTE_CAP
 
 	// INGRESS_CAP[i].numOfDequeuePkts = int(INGRESS_CAP[i].cap / PKT_LEN)
-	INGRESS_CAP[i].numOfDequeueBits = int(INGRESS_CAP[i].cap)
-	oldQueue := INGRESS_CAP[i].vmQueue
-	INGRESS_CAP[i].vmQueue = float64(CONFIGURATION.NUM_NIC_VM) * float64(NUM_VMs[i]) * CONFIGURATION.BUFF_SIZE
-	INGRESS_CAP[i].availableBuffSpace = INGRESS_CAP[i].vmQueue - (oldQueue - INGRESS_CAP[i].availableBuffSpace)
-	if INGRESS_CAP[i].availableBuffSpace < 0 {
-		INGRESS_CAP[i].availableBuffSpace = oldQueue - INGRESS_CAP[i].availableBuffSpace
+	INGRESS_CAP[i][attackType].numOfDequeueBits = int(INGRESS_CAP[i][attackType].cap)
+	oldQueue := INGRESS_CAP[i][attackType].vmQueue
+	INGRESS_CAP[i][attackType].vmQueue = float64(CONFIGURATION.NUM_NIC_VM) * float64(NUM_VMs[i][attackType]) * CONFIGURATION.BUFF_SIZE
+	INGRESS_CAP[i][attackType].availableBuffSpace = INGRESS_CAP[i][attackType].vmQueue - (oldQueue - INGRESS_CAP[i][attackType].availableBuffSpace)
+	if INGRESS_CAP[i][attackType].availableBuffSpace < 0 {
+		INGRESS_CAP[i][attackType].availableBuffSpace = oldQueue - INGRESS_CAP[i][attackType].availableBuffSpace
 	}
-	_DEBUG.Printf("Function: change Capacity, capacity at ingress %d = %f", i, INGRESS_CAP[i].cap)
+	_DEBUG.Printf("Function: change Capacity, capacity at ingress %d = %f", i, INGRESS_CAP[i][attackType].cap)
 	LOCK_INGRESS_CAP[i].Unlock()
 
 }
@@ -61,7 +60,7 @@ func dynamicMitigation() {
 	for i := 0; i < CONFIGURATION.INGRESS_LOC; i++ {
 		cap := (newCap[i] / sum) * CONFIGURATION.ISP_CAP
 		// _DEBUG.Printf("Function: dynamicMitigation, capacity at ingress %d = %f, newcap[i] is %f, sum is %f", i, cap, newCap[i], sum)
-		changeCapacity(i, cap)
+		changeCapacity(i, cap, "")
 	}
 }
 
@@ -85,8 +84,8 @@ func staticMitigation() {
 
 		LOCK_CURR_TRAFFIC_STATS[i].Unlock()
 		// # INGRESS_CAP[i] = random.uniform(MIN_TRAFFIC[i],PEAK_TRAFFIC[i])
-		changeCapacity(i, perSec_tcp)
-		changeCapacity(i, perSec_udp)
+		changeCapacity(i, perSec_tcp,"TCP_SYN")
+		changeCapacity(i, perSec_udp,"UDP_FLOOD")
 
 	}
 }
@@ -109,7 +108,7 @@ func adaptiveMitigation() {
 
 		LOCK_CURR_TRAFFIC_STATS[i].Unlock()
 		// # INGRESS_CAP[i] = random.uniform(MIN_TRAFFIC[i],PEAK_TRAFFIC[i])
-		changeCapacity(i, perSec)
+		changeCapacity(i, perSec,"")
 
 	}
 }

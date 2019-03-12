@@ -7,7 +7,7 @@ import (
 
 type packet struct {
 	packet_len  float64
-	protocol    string
+	protocol    string   // tcp, udp, dns
 	ingress     int
 	attack_flag bool
 	dest        string
