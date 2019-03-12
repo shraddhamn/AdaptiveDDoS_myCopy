@@ -55,7 +55,7 @@ func addToBacklog(pkt packet) {
 	} else {
 	
 	Backlog_Queue[pkt.ingress].Add(pkt.src,1,cache.DefaultExpiration)
-	
+	CONN_IN_BACKLOG+=1
     }
  }
 	
@@ -63,6 +63,7 @@ func addToBacklog(pkt packet) {
 	
 func RemoveFromBacklog(pkt packet) {
     Backlog_Queue[pkt.ingress].Delete(pkt.src)
+    CONN_IN_BACKLOG-=1
 }
 	
 	
