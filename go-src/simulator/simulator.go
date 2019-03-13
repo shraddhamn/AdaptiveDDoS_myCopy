@@ -1,34 +1,29 @@
 package main
 
 import (
-	"os"
-    "../helper/go-cache"
-	"../helper/fifo"
-
-	// "fmt"
 	"encoding/json"
 	"log"
+	"os"
 	"runtime"
 	"time"
+
+	"../helper/fifo"
+	"../helper/go-cache"
 )
 
-const TOTAL_BACKLOG_SIZE int = 256 // syn queue acceoting 256 connnections
+const TOTAL_BACKLOG_SIZE int = 256 // syn queue accepting 256 connnections
 
 var (
-	CONFIGURATION      Config
-	CURR_TRAFFIC_STATS []map[string]float64
-	// PREV_TRAFFIC_STATS []map[string]int
-	PEAK_TRAFFIC []float64
-	MIN_TRAFFIC  []float64
-	AVG_TRAFFIC  []float64
-	// RECEIVE_COUNTER []int
+	CONFIGURATION         Config
+	CURR_TRAFFIC_STATS    []map[string]float64
+	PEAK_TRAFFIC          []float64
+	MIN_TRAFFIC           []float64
+	AVG_TRAFFIC           []float64
 	legitimateDropCounter []int
-	// processCounter []int
-	// BUFFER []*fifo.Queue
-	pktQueue []*fifo.Queue
-	Backlog_Queue []*cache.Cache
-	ATTACK_TYPES [3]string
-	BACKLOG [TOTAL_BACKLOG_SIZE]string // array to store pkts
+	pktQueue              []*fifo.Queue
+	Backlog_Queue         []*cache.Cache
+	ATTACK_TYPES          [3]string
+	BACKLOG               [TOTAL_BACKLOG_SIZE]string // array to store pkts
 
 	NUM_VMs                 []map[string]int
 	INGRESS_CAP             []map[string]*VM
@@ -41,7 +36,6 @@ var (
 	CONN_IN_BACKLOG         int = 0 //num of connection in backlog
 	times                   string
 )
-
 
 func main() {
 
