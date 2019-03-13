@@ -28,12 +28,12 @@ func diagnose_UDP_Flood(pkt packet) {
 
 	if detect_UDP_Flood(pkt) {
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
-		CURR_TRAFFIC_STATS[pkt.ingress]["UDP_FLOOD"] += 1
-		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += 1
+		CURR_TRAFFIC_STATS[pkt.ingress]["UDP_FLOOD"] += pkt.packet_len
+		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 	} else {
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
-		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += 1
+		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 	}
 }
@@ -42,13 +42,13 @@ func diagnose_TCP_SYN_Flood(pkt packet) {
 
 	if detect_TCP_SYN_Flood(pkt) {
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
-		CURR_TRAFFIC_STATS[pkt.ingress]["TCP_SYN"] += 1
-		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += 1
+		CURR_TRAFFIC_STATS[pkt.ingress]["TCP_SYN"] += pkt.packet_len
+		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 
 	} else {
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
-		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += 1
+		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 	}
 }
@@ -79,7 +79,7 @@ func diagnoseTraffic(pkt packet) {
 		}
 	} else {
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
-		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += 1
+		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 	}
 }

@@ -32,8 +32,8 @@ func initializeISP() {
 	// BUFFER = make([]*fifo.Queue, CONFIGURATION.INGRESS_LOC)
 
 	for i := 0; i < CONFIGURATION.INGRESS_LOC; i++ {
-		var m map[string]int
-		m = make(map[string]int)
+		var m map[string]float64
+		m = make(map[string]float64)
 		m["total"] = 0
 		m["UDP_FLOOD"] = 0
 		m["TCP_SYN"] = 0
@@ -66,7 +66,7 @@ func countDroppedPackets() {
 	// # loggings.error('This should go to both console and file')
 }
 
-func wastedResources(total []map[string]int) {
+func wastedResources(total []map[string]float64) {
 
 	for i := 0; i < CONFIGURATION.INGRESS_LOC; i++ {
 
@@ -81,9 +81,9 @@ func wastedResources(total []map[string]int) {
 
 		for _, element := range ATTACK_TYPES {
 			LOCK_CURR_TRAFFIC_STATS[i].Lock()
-			receivedPktsPerWIndow := total[i][element]
+			receivedBitsPerWIndow := total[i][element]
 			LOCK_CURR_TRAFFIC_STATS[i].Unlock()
-			wastedCap := INGRESS_CAP[i][element].cap - (float64(receivedPktsPerWIndow) * PKT_LEN / CONFIGURATION.EPOCH_TIME)
+			wastedCap := INGRESS_CAP[i][element].cap - (float64(receivedBitsPerWIndow) / CONFIGURATION.EPOCH_TIME)
 			
 			// fmt.Printf("%f",wastedCap)
 
@@ -110,7 +110,7 @@ func collectStats() {
 
 		LOCK_CURR_TRAFFIC_STATS[i].Lock()
 		// PREV_TRAFFIC_STATS[i]["total"] = CURR_TRAFFIC_STATS[i]["total"]
-		_INFO.Printf("Total_Traffic %d Ingress %d", CURR_TRAFFIC_STATS[i]["total"], i)
+		_INFO.Printf("Total_Traffic %v Ingress %d", CURR_TRAFFIC_STATS[i]["total"], i)
 		// total = append(total,CURR_TRAFFIC_STATS[i]["total"])
 		// t := CURR_TRAFFIC_STATS[i]["total"]
 		// copy(total,CURR_TRAFFIC_STATS)
@@ -118,11 +118,11 @@ func collectStats() {
 		CURR_TRAFFIC_STATS[i]["total"] = 0
 
 		// PREV_TRAFFIC_STATS[i]["udp_flood"] = CURR_TRAFFIC_STATS[i]["udp_flood"]
-		_INFO.Printf("Total_UDP_Flood %d Ingress %d", CURR_TRAFFIC_STATS[i]["udp_flood"], i)
+		_INFO.Printf("Total_UDP_Flood %v Ingress %d", CURR_TRAFFIC_STATS[i]["udp_flood"], i)
 		CURR_TRAFFIC_STATS[i]["udp_flood"] = 0
 
 		// PREV_TRAFFIC_STATS[i]["tcp_syn"] = CURR_TRAFFIC_STATS[i]["tcp_syn"]
-		_INFO.Printf("Total_TCP_Syn %d Ingress %d", CURR_TRAFFIC_STATS[i]["tcp_syn"], i)
+		_INFO.Printf("Total_TCP_Syn %v Ingress %d", CURR_TRAFFIC_STATS[i]["tcp_syn"], i)
 		CURR_TRAFFIC_STATS[i]["tcp_syn"] = 0
 		LOCK_CURR_TRAFFIC_STATS[i].Unlock()
 

@@ -16,7 +16,7 @@ const TOTAL_BACKLOG_SIZE int = 256 // syn queue acceoting 256 connnections
 
 var (
 	CONFIGURATION      Config
-	CURR_TRAFFIC_STATS []map[string]int
+	CURR_TRAFFIC_STATS []map[string]float64
 	// PREV_TRAFFIC_STATS []map[string]int
 	PEAK_TRAFFIC []float64
 	MIN_TRAFFIC  []float64
