@@ -19,6 +19,7 @@ type Config struct {
 	PROCESSING_DELAY  float64 `json:"processingDelay"`
 	BUFF_SIZE         float64 `json:"buffSize"`
 	BACKLOG_SIZE      int     `json:"backlogSize"`
+	SERVER_CAP        int     `json:"ServerCapacity"`
 }
 
 func LoadConfiguration(file string) Config {

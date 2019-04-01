@@ -1,29 +1,36 @@
 package main
 
 import (
+	"os"
+    "../helper/go-cache"
+	"../helper/fifo"
+
+	// "fmt"
 	"encoding/json"
 	"log"
-	"os"
 	"runtime"
 	"time"
-
-	"../helper/fifo"
-	"../helper/go-cache"
 )
 
-const TOTAL_BACKLOG_SIZE int = 256 // syn queue accepting 256 connnections
+const TOTAL_BACKLOG_SIZE int = 256 // syn queue acceoting 256 connnections
 
 var (
-	CONFIGURATION         Config
-	CURR_TRAFFIC_STATS    []map[string]float64
-	PEAK_TRAFFIC          []float64
-	MIN_TRAFFIC           []float64
-	AVG_TRAFFIC           []float64
+	CONFIGURATION      Config
+	CURR_TRAFFIC_STATS []map[string]int
+	// PREV_TRAFFIC_STATS []map[string]int
+	PEAK_TRAFFIC []float64
+	MIN_TRAFFIC  []float64
+	AVG_TRAFFIC  []float64
+	// RECEIVE_COUNTER []int
 	legitimateDropCounter []int
-	pktQueue              []*fifo.Queue
-	Backlog_Queue         []*cache.Cache
-	ATTACK_TYPES          [3]string
-	BACKLOG               [TOTAL_BACKLOG_SIZE]string // array to store pkts
+	// processCounter []int
+	// BUFFER []*fifo.Queue
+	pktQueue []*fifo.Queue
+	custQueue []*fifo.Queue
+	Backlog_Queue []*cache.Cache
+	Backlog_Cust []*cache.Cache
+	ATTACK_TYPES [3]string
+	BACKLOG [TOTAL_BACKLOG_SIZE]string // array to store pkts
 
 	NUM_VMs                 []map[string]int
 	INGRESS_CAP             []map[string]*VM
@@ -34,8 +41,10 @@ var (
 	EPOCH_TIME                      = 5.0
 	WINDOW_COUNTER          int
 	CONN_IN_BACKLOG         int = 0 //num of connection in backlog
+	CONN_CUST               int = 0 //num of connection in customer
 	times                   string
 )
+
 
 func main() {
 
@@ -81,6 +90,7 @@ func main() {
 	// processingThread.start()
 	statsTicker := time.NewTicker(time.Duration(EPOCH_TIME) * time.Second)
 	processTicker := time.NewTicker(time.Duration(CONFIGURATION.PROCESSING_DELAY) * time.Millisecond)
+	
 	// go processing()
 	// go flowGenBenign("simple", 0)
 	for {

@@ -7,12 +7,16 @@ import (
 	
 )
 
-//add Queue here for Customer
+func CreateQueue() {
+        queueSize := float64(CONFIGURATION.SERVER_CAP)  * CONFIGURATION.BUFF_SIZE
+        
+}
+
 
 
 func addToBacklog(pkt packet) {
 
-	if CONN_CUST == 256 {
+	if CONN_CUST == 256*CONFIGURATION.SERVER_CAP {
 		fmt.Println("Backlog Full")
 		dropPacket(pkt)
 	} else {
@@ -26,12 +30,17 @@ func addToBacklog(pkt packet) {
 	
 	
 func RemoveFromBacklog(pkt packet) {
-    Backlog_Cust[pkt.ingress].Delete(pkt.src)
-    CONN_CUST-=1
-    fmt.Println(Backlog_Cust.itemCount())
+    if CONN_CUST > 0 {
+            Backlog_Cust[pkt.ingress].Delete(pkt.src)
+            CONN_CUST-=1
+            fmt.Println(Backlog_Cust.itemCount())
+    }
 }
 	
 	
+func enqueue(pkt packet, i int) {
+	custQueue[i].Add(pkt)
+}
 
 func processPacket(attackType string) {
         
@@ -52,6 +61,10 @@ func processPacket(attackType string) {
 		}
         
 }        
+        
+func dequeue(i int) packet {
+	return custQueue[i].Next().(packet)
+}
 
 #	for i := 0; i < CONFIGURATION.INGRESS_LOC; i++ {
 #
