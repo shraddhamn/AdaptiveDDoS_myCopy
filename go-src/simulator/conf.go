@@ -7,19 +7,22 @@ import (
 )
 
 type Config struct {
-	ATTACK_TYPE       string  `json:"attackerType"`
-	DEFENSE_TYPE      string  `json:"defenseType"`
-	INGRESS_LOC       int     `json:"ingreeLoc"`
-	VM_COMPUTE_CAP    float64 `json:"VMCapacity"`
-	ISP_CAP           float64 `json:"ISPCapacity"`
-	NUM_NIC_VM        int     `json:"numNICsVM"`
-	ATTACKER_CAP      float64 `json:"attackerCapacity"`
-	LEG_TRAFFIC_MODEL string  `json:"legitimateTraffic"`
-	EPOCH_TIME        float64 `json:"epochTime"`
-	PROCESSING_DELAY  float64 `json:"processingDelay"`
-	BUFF_SIZE         float64 `json:"buffSize"`
-	BACKLOG_SIZE      int     `json:"backlogSize"`
-	SERVER_CAP        int     `json:"ServerCapacity"`
+	ATTACK_TYPE        string  `json:"attackerType"`
+	DEFENSE_TYPE       string  `json:"defenseType"`
+	INGRESS_LOC        int     `json:"ingreeLoc"`
+	VM_COMPUTE_CAP     float64 `json:"VMCapacity"`
+	ISP_CAP            float64 `json:"ISPCapacity"`
+	NUM_NIC_VM         int     `json:"numNICsVM"`
+	ATTACKER_CAP       float64 `json:"attackerCapacity"`
+	LEG_TRAFFIC_MODEL  string  `json:"legitimateTraffic"`
+	EPOCH_TIME         float64 `json:"epochTime"`
+	PROCESSING_DELAY   float64 `json:"processingDelay"`
+	BUFF_SIZE          float64 `json:"buffSize"`
+	TARGET_BUFF_SIZE   float64 `json:"targetBuffSize"`
+	BACKLOG_SIZE       int     `json:"backlogSize"`
+	SERVER_CAP         int     `json:"ServerCapacity"`
+	TARGET_PROCESS_CAP float64 `json:"TargetProcessCapacity"`
+	TARGET_SERVER_CAP  float64 `json:"TargetServerCapacity"`
 }
 
 func LoadConfiguration(file string) Config {

@@ -10,5 +10,8 @@
   "legitimateTraffic": "simple",
   "epochTime": 5,
   "processingDelay": 1,
-  "backlogSize": 256
+  "backlogSize": 256,
+  "TargetProcessCapacity": 10,
+  "targetBuffSize": 100000,
+  "TargetServerCapacity": 10
 }

@@ -1,12 +1,9 @@
 package main
 
-
 import (
 	"math"
-	"time"
-	"../helper/fifo"
-	"../helper/go-cache"
 
+	"../helper/fifo"
 )
 
 // var (
@@ -41,7 +38,7 @@ func initializeISP() {
 		CURR_TRAFFIC_STATS = append(CURR_TRAFFIC_STATS, m)
 		MIN_TRAFFIC[i] = math.Inf(0)
 		pktQueue = append(pktQueue, fifo.NewQueue())
-		Backlog_Queue = append(Backlog_Queue,cache.New(5*time.Second, 5*time.Second))
+		// Backlog_Queue = append(Backlog_Queue,cache.New(5*time.Second, 5*time.Second))
 		// PREV_TRAFFIC_STATS = append(PREV_TRAFFIC_STATS,m)
 		// BUFFER[i] = fifo.NewQueue()
 
@@ -76,7 +73,7 @@ func wastedResources(total []map[string]float64) {
 
 		// prevReceiveCount[i] = total[i]["total"]
 		// LOCK_RECEIVE_COUNTER[i].Unlock()
-		
+
 		LOCK_INGRESS_CAP[i].Lock()
 
 		for _, element := range ATTACK_TYPES {
@@ -84,7 +81,7 @@ func wastedResources(total []map[string]float64) {
 			receivedBitsPerWIndow := total[i][element]
 			LOCK_CURR_TRAFFIC_STATS[i].Unlock()
 			wastedCap := INGRESS_CAP[i][element].cap - (float64(receivedBitsPerWIndow) / CONFIGURATION.EPOCH_TIME)
-			
+
 			// fmt.Printf("%f",wastedCap)
 
 			// _DEBUG.Printf("Function: wastedResources, wasted resources at ingress %d = %v Mbps",i, wastedCap)

@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"math"
-	"../helper/go-cache"
 	// "time"
 )
 
@@ -11,9 +9,9 @@ func enqueuePacket(pkt packet) {
 
 	LOCK_INGRESS_CAP[pkt.ingress].Lock()
 	var attackType string
-	if(pkt.protocol == "udp") {
+	if pkt.protocol == "udp" {
 		attackType = "UDP_FLOOD"
-	} else if(pkt.protocol == "tcp") {
+	} else if pkt.protocol == "tcp" {
 		attackType = "TCP_SYN"
 	} else {
 		attackType = "DNS_AMP"
@@ -47,29 +45,22 @@ func dropPacket(pkt packet) {
 	}
 }
 
-func addToBacklog(pkt packet) {
+// func addToBacklog(pkt packet) {
 
-	if CONN_IN_BACKLOG == 256 {
-		fmt.Println("Backlog Full")
-		dropPacket(pkt)
-	} else {
-	
-	Backlog_Queue[pkt.ingress].Add(pkt.src,1,cache.DefaultExpiration)
-	CONN_IN_BACKLOG+=1
-    }
- }
-	
-	
-	
-func RemoveFromBacklog(pkt packet) {
-    Backlog_Queue[pkt.ingress].Delete(pkt.src)
-    CONN_IN_BACKLOG-=1
-}
-	
-	
+// 	if CONN_IN_BACKLOG == 256 {
+// 		fmt.Println("Backlog Full")
+// 		dropPacket(pkt)
+// 	} else {
 
+// 	Backlog_Queue[pkt.ingress].Add(pkt.src,1,cache.DefaultExpiration)
+// 	CONN_IN_BACKLOG+=1
+//     }
+//  }
 
-
+// func RemoveFromBacklog(pkt packet) {
+//     Backlog_Queue[pkt.ingress].Delete(pkt.src)
+//     CONN_IN_BACKLOG-=1
+// }
 
 func processPacket(attackType string) {
 
@@ -82,12 +73,18 @@ func processPacket(attackType string) {
 
 		for bitsToDequeue >= 0 {
 			var pkt packet = dequeue(i)
-			if pkt.synFlag == 1 {
-				addToBacklog(pkt)
-			} else if pkt.ackFlag == 1 {
-    			RemoveFromBacklog(pkt)
+			// if pkt.synFlag == 1 {
+			// 	addToBacklog(pkt)
+			// } else if pkt.ackFlag == 1 {
+			// 	RemoveFromBacklog(pkt)
+			// }
+			pkt = diagnose(pkt)
+			if pkt.detection == "benign" && pkt.dest == "target" {
+				enqueueTarget(pkt)
 			}
-			go diagnose(pkt)
+			if pkt.dest == "attacker" {
+				enqueueAttacker(pkt)
+			}
 			bitsToDequeue -= int(pkt.packet_len)
 		}
 

@@ -7,14 +7,15 @@ import (
 
 type packet struct {
 	packet_len  float64
-	protocol    string   // tcp, udp, dns
+	protocol    string // tcp, udp, dns
 	ingress     int
 	attack_flag bool
 	dest        string
 	src         string
 	synFlag     int
 	ackFlag     int
-	// detection   string
+	detection   string
+	timestamp   time.Time
 }
 
 func NewPacket(l float64, protocol string, ingress int, af bool) packet {
@@ -24,7 +25,7 @@ func NewPacket(l float64, protocol string, ingress int, af bool) packet {
 	p.ingress = ingress
 	p.attack_flag = af
 	p.dest = "dummy"
-	// p.detection = "benign"
+	p.detection = "benign"
 	return p
 }
 func flowGenBenign(model string, ingress int) {

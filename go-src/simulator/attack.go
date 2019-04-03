@@ -8,6 +8,24 @@ import (
 )
 
 var dest int
+var lastPingSent time.Time
+
+func ping(ingress int) {
+	var pingPkt packet = NewPacket(64*8, "ping", ingress, false)
+	pingPkt.dest = "target"
+	lastPingSent = time.Now()
+	enqueuePacket(pingPkt)
+
+}
+func calculateRTT(pkt packet) {
+	t := time.Now()
+	RTT = t.Sub(lastPingSent)
+}
+func enqueueAttacker(pkt packet) {
+	if pkt.protocol == "ping" {
+		calculateRTT(pkt)
+	}
+}
 
 func attack() {
 	if CONFIGURATION.ATTACK_TYPE == "randIngress" {

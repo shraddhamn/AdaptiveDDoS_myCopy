@@ -24,9 +24,10 @@ func detect_TCP_SYN_Flood(tcp_pkt packet) bool {
 	return false
 }
 
-func diagnose_UDP_Flood(pkt packet) {
+func diagnose_UDP_Flood(pkt packet) packet {
 
 	if detect_UDP_Flood(pkt) {
+		pkt.detection = "attack"
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
 		CURR_TRAFFIC_STATS[pkt.ingress]["UDP_FLOOD"] += pkt.packet_len
 		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
@@ -36,11 +37,13 @@ func diagnose_UDP_Flood(pkt packet) {
 		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 	}
+	return pkt
 }
 
-func diagnose_TCP_SYN_Flood(pkt packet) {
+func diagnose_TCP_SYN_Flood(pkt packet) packet {
 
 	if detect_TCP_SYN_Flood(pkt) {
+		pkt.detection = "attack"
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
 		CURR_TRAFFIC_STATS[pkt.ingress]["TCP_SYN"] += pkt.packet_len
 		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
@@ -51,6 +54,7 @@ func diagnose_TCP_SYN_Flood(pkt packet) {
 		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 	}
+	return pkt
 }
 
 func isUDP(pkt packet) bool {
@@ -67,19 +71,20 @@ func isTCP(pkt packet) bool {
 	return false
 }
 
-func diagnoseTraffic(pkt packet) {
+func diagnoseTraffic(pkt packet) packet {
 
 	if pkt.attack_flag == true {
 		if isUDP(pkt) {
-			diagnose_UDP_Flood(pkt)
+			pkt = diagnose_UDP_Flood(pkt)
 		}
 
 		if isTCP(pkt) {
-			diagnose_TCP_SYN_Flood(pkt)
+			pkt = diagnose_TCP_SYN_Flood(pkt)
 		}
 	} else {
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Lock()
 		CURR_TRAFFIC_STATS[pkt.ingress]["total"] += pkt.packet_len
 		LOCK_CURR_TRAFFIC_STATS[pkt.ingress].Unlock()
 	}
+	return pkt
 }

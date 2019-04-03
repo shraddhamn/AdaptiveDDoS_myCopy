@@ -5,7 +5,7 @@ import "math"
 type VM struct {
 	cap     float64
 	vmQueue float64
-	vmType string
+	vmType  string
 	//numOfDequeuePkts   int
 	availableBuffSpace float64
 	numOfDequeueBits   int
@@ -21,8 +21,8 @@ func initializeDefense() {
 		tmpCap = make(map[string]*VM)
 		for _, element := range ATTACK_TYPES {
 
-			m[element] =  int(math.Floor(total_num_vms*1.0/float64(len(ATTACK_TYPES))*float64(CONFIGURATION.INGRESS_LOC)))
-			
+			m[element] = int(math.Floor(total_num_vms * 1.0 / float64(len(ATTACK_TYPES)) * float64(CONFIGURATION.INGRESS_LOC)))
+
 			// queueSize := float64(CONFIGURATION.NUM_NIC_VM) * float64(NUM_VMs[i]) * CONFIGURATION.BUFF_SIZE
 			queueSize := float64(CONFIGURATION.NUM_NIC_VM) * float64(m[element]) * CONFIGURATION.BUFF_SIZE
 
@@ -30,7 +30,7 @@ func initializeDefense() {
 			vmCapacity := float64(m[element]) * CONFIGURATION.VM_COMPUTE_CAP * float64(CONFIGURATION.NUM_NIC_VM)
 			//dequeuePkts := int(math.Ceil(vmCapacity / (PKT_LEN * 1000)))
 			dequeueBits := int(math.Ceil(vmCapacity / (CONFIGURATION.PROCESSING_DELAY)))
-			
+
 			tmpCap[element] = new(VM)
 			tmpCap[element].cap = vmCapacity
 			tmpCap[element].vmQueue = queueSize
@@ -51,8 +51,9 @@ func initializeDefense() {
 	}
 }
 
-func diagnose(pkt packet) {
-	diagnoseTraffic(pkt)
+func diagnose(pkt packet) packet {
+	pkt = diagnoseTraffic(pkt)
+	return pkt
 }
 
 func mitigate() {
