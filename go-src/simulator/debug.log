@@ -1062,3 +1062,724 @@ BEGUG: 2018/12/07 19:45:04 isp.go:55: Function: countDroppedPackets, dropped Pac
 BEGUG: 2018/12/07 19:45:04 isp.go:55: Function: countDroppedPackets, dropped Packets at ingress 7 = 0
 BEGUG: 2018/12/07 19:45:04 isp.go:55: Function: countDroppedPackets, dropped Packets at ingress 8 = 0
 BEGUG: 2018/12/07 19:45:04 isp.go:55: Function: countDroppedPackets, dropped Packets at ingress 9 = 0
+BEGUG: 2019/04/03 17:19:56 simulator.go:61: Hello from main
+BEGUG: 2019/04/03 17:19:56 simulator.go:63: Reading configuration file
+BEGUG: 2019/04/03 17:19:56 simulator.go:67: {
+	"attackerType": "randIngress",
+	"defenseType": "dynamic",
+	"ingreeLoc": 10,
+	"VMCapacity": 1000,
+	"ISPCapacity": 20000,
+	"numNICsVM": 1,
+	"attackerCapacity": 2000,
+	"legitimateTraffic": "simple",
+	"epochTime": 5,
+	"processingDelay": 1,
+	"buffSize": 8000000,
+	"targetBuffSize": 100000,
+	"backlogSize": 256,
+	"ServerCapacity": 0,
+	"TargetProcessCapacity": 10,
+	"TargetServerCapacity": 10
+}
+BEGUG: 2019/04/03 17:19:56 simulator.go:69: Initialize traffic stats data structures in ISP
+BEGUG: 2019/04/03 17:19:56 isp.go:16: Function: initializeISP- Initializing TRAFFIC_STATS variables
+BEGUG: 2019/04/03 17:19:56 simulator.go:73: Initialize capacity of ingress locations depending on the defense type
+BEGUG: 2019/04/03 17:19:56 defense.go:15: Function: initializeAdaptive - Initialize inital capapcity of ingress locations
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:19:56 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:19:56 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:19:56 simulator.go:79: Start legitimate traffic thread
+BEGUG: 2019/04/03 17:19:56 simulator.go:84: Start attack traffic thread
+BEGUG: 2019/04/03 17:19:56 simulator.go:88: Start packet processing thread - processing delay = 1.000000 s
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 simulator.go:89: Start stats collection thread - epoch = 5.000000 s
+BEGUG: 2019/04/03 17:19:56 attack.go:63: Function: randIngress - Number of packets to send in 1 second 2500000 with packet length 0.000800 and send rate 2000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:19:56 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 simulator.go:61: Hello from main
+BEGUG: 2019/04/03 17:22:16 simulator.go:63: Reading configuration file
+BEGUG: 2019/04/03 17:22:16 simulator.go:67: {
+	"attackerType": "randIngress",
+	"defenseType": "dynamic",
+	"ingreeLoc": 10,
+	"VMCapacity": 1000,
+	"ISPCapacity": 20000,
+	"numNICsVM": 1,
+	"attackerCapacity": 2000,
+	"legitimateTraffic": "simple",
+	"epochTime": 5,
+	"processingDelay": 1,
+	"buffSize": 8000000,
+	"targetBuffSize": 100000,
+	"backlogSize": 256,
+	"ServerCapacity": 0,
+	"TargetProcessCapacity": 10,
+	"TargetServerCapacity": 10
+}
+BEGUG: 2019/04/03 17:22:16 simulator.go:69: Initialize traffic stats data structures in ISP
+BEGUG: 2019/04/03 17:22:16 isp.go:16: Function: initializeISP- Initializing TRAFFIC_STATS variables
+BEGUG: 2019/04/03 17:22:16 simulator.go:73: Initialize capacity of ingress locations depending on the defense type
+BEGUG: 2019/04/03 17:22:16 defense.go:15: Function: initializeAdaptive - Initialize inital capapcity of ingress locations
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:22:16 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:22:16 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:22:16 simulator.go:79: Start legitimate traffic thread
+BEGUG: 2019/04/03 17:22:16 simulator.go:84: Start attack traffic thread
+BEGUG: 2019/04/03 17:22:16 simulator.go:88: Start packet processing thread - processing delay = 1.000000 s
+BEGUG: 2019/04/03 17:22:16 simulator.go:89: Start stats collection thread - epoch = 5.000000 s
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 attack.go:63: Function: randIngress - Number of packets to send in 1 second 2500000 with packet length 0.000800 and send rate 2000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:16 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:22:19 simulator.go:61: Hello from main
+BEGUG: 2019/04/03 17:22:19 simulator.go:63: Reading configuration file
+BEGUG: 2019/04/03 17:22:19 simulator.go:67: {
+	"attackerType": "randIngress",
+	"defenseType": "dynamic",
+	"ingreeLoc": 10,
+	"VMCapacity": 1000,
+	"ISPCapacity": 20000,
+	"numNICsVM": 1,
+	"attackerCapacity": 2000,
+	"legitimateTraffic": "simple",
+	"epochTime": 5,
+	"processingDelay": 1,
+	"buffSize": 8000000,
+	"targetBuffSize": 100000,
+	"backlogSize": 256,
+	"ServerCapacity": 0,
+	"TargetProcessCapacity": 10,
+	"TargetServerCapacity": 10
+}
+BEGUG: 2019/04/03 17:22:19 simulator.go:69: Initialize traffic stats data structures in ISP
+BEGUG: 2019/04/03 17:22:19 isp.go:16: Function: initializeISP- Initializing TRAFFIC_STATS variables
+BEGUG: 2019/04/03 17:22:19 simulator.go:73: Initialize capacity of ingress locations depending on the defense type
+BEGUG: 2019/04/03 17:22:19 defense.go:15: Function: initializeAdaptive - Initialize inital capapcity of ingress locations
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:22:19 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:22:19 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:22:19 simulator.go:79: Start legitimate traffic thread
+BEGUG: 2019/04/03 17:22:19 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:28:10 simulator.go:61: Hello from main
+BEGUG: 2019/04/03 17:28:10 simulator.go:63: Reading configuration file
+BEGUG: 2019/04/03 17:28:10 simulator.go:67: {
+	"attackerType": "randIngress",
+	"defenseType": "dynamic",
+	"ingreeLoc": 10,
+	"VMCapacity": 1000,
+	"ISPCapacity": 20000,
+	"numNICsVM": 1,
+	"attackerCapacity": 2000,
+	"legitimateTraffic": "simple",
+	"epochTime": 5,
+	"processingDelay": 1,
+	"buffSize": 8000000,
+	"targetBuffSize": 100000,
+	"backlogSize": 256,
+	"ServerCapacity": 0,
+	"TargetProcessCapacity": 10,
+	"TargetServerCapacity": 10
+}
+BEGUG: 2019/04/03 17:28:10 simulator.go:69: Initialize traffic stats data structures in ISP
+BEGUG: 2019/04/03 17:28:10 isp.go:16: Function: initializeISP- Initializing TRAFFIC_STATS variables
+BEGUG: 2019/04/03 17:28:10 simulator.go:73: Initialize capacity of ingress locations depending on the defense type
+BEGUG: 2019/04/03 17:28:10 defense.go:15: Function: initializeAdaptive - Initialize inital capapcity of ingress locations
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:28:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:28:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:28:10 simulator.go:79: Start legitimate traffic thread
+BEGUG: 2019/04/03 17:28:10 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:32:49 simulator.go:61: Hello from main
+BEGUG: 2019/04/03 17:32:49 simulator.go:63: Reading configuration file
+BEGUG: 2019/04/03 17:32:49 simulator.go:67: {
+	"attackerType": "randIngress",
+	"defenseType": "dynamic",
+	"ingreeLoc": 10,
+	"VMCapacity": 1000,
+	"ISPCapacity": 20000,
+	"numNICsVM": 1,
+	"attackerCapacity": 2000,
+	"legitimateTraffic": "simple",
+	"epochTime": 5,
+	"processingDelay": 1,
+	"buffSize": 8000000,
+	"targetBuffSize": 100000,
+	"backlogSize": 256,
+	"ServerCapacity": 0,
+	"TargetProcessCapacity": 10,
+	"TargetServerCapacity": 10
+}
+BEGUG: 2019/04/03 17:32:49 simulator.go:69: Initialize traffic stats data structures in ISP
+BEGUG: 2019/04/03 17:32:49 isp.go:16: Function: initializeISP- Initializing TRAFFIC_STATS variables
+BEGUG: 2019/04/03 17:32:49 simulator.go:73: Initialize capacity of ingress locations depending on the defense type
+BEGUG: 2019/04/03 17:32:49 defense.go:15: Function: initializeAdaptive - Initialize inital capapcity of ingress locations
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:32:49 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:32:49 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:32:49 simulator.go:79: Start legitimate traffic thread
+BEGUG: 2019/04/03 17:32:49 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000
+BEGUG: 2019/04/03 17:33:10 simulator.go:61: Hello from main
+BEGUG: 2019/04/03 17:33:10 simulator.go:63: Reading configuration file
+BEGUG: 2019/04/03 17:33:10 simulator.go:67: {
+	"attackerType": "randIngress",
+	"defenseType": "dynamic",
+	"ingreeLoc": 10,
+	"VMCapacity": 1000,
+	"ISPCapacity": 20000,
+	"numNICsVM": 1,
+	"attackerCapacity": 2000,
+	"legitimateTraffic": "simple",
+	"epochTime": 5,
+	"processingDelay": 1,
+	"buffSize": 8000000,
+	"targetBuffSize": 100000,
+	"backlogSize": 256,
+	"ServerCapacity": 0,
+	"TargetProcessCapacity": 10,
+	"TargetServerCapacity": 10
+}
+BEGUG: 2019/04/03 17:33:10 simulator.go:69: Initialize traffic stats data structures in ISP
+BEGUG: 2019/04/03 17:33:10 isp.go:16: Function: initializeISP- Initializing TRAFFIC_STATS variables
+BEGUG: 2019/04/03 17:33:10 simulator.go:73: Initialize capacity of ingress locations depending on the defense type
+BEGUG: 2019/04/03 17:33:10 defense.go:15: Function: initializeAdaptive - Initialize inital capapcity of ingress locations
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 0 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 0 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 0 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 1 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 1 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 1 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 2 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 2 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 2 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 3 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 3 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 3 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 4 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 4 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 4 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 5 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 5 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 5 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 6 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 6 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 6 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 7 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 7 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 7 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 8 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 8 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 8 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:41: Function: initializeAdaptive - Initial capacity of ingress 9 = 66000.000000
+BEGUG: 2019/04/03 17:33:10 defense.go:43: Function: initializeAdaptive - Bits to dequeue at ingress 9 = 66000
+BEGUG: 2019/04/03 17:33:10 defense.go:44: Function: initializeAdaptive - Initial queue size at ingress 9 = 528000000.000000
+BEGUG: 2019/04/03 17:33:10 simulator.go:79: Start legitimate traffic thread
+BEGUG: 2019/04/03 17:33:10 benignTraffic.go:49: Function: flowGenSimple - Number of packets to send in 100 ms 1250000 with packet length 0.000800 and send rate 1000.000000

@@ -71,7 +71,7 @@ func processPacket(attackType string) {
 		//pktsToDequeue := int(math.Ceil((INGRESS_CAP[i].vmQueue - INGRESS_CAP[i].availableBuffSpace) / PKT_LEN))
 		bitsToDequeue := int(math.Ceil((INGRESS_CAP[i][attackType].vmQueue - INGRESS_CAP[i][attackType].availableBuffSpace)))
 
-		for bitsToDequeue >= 0 {
+		for bitsToDequeue > 0 {
 			var pkt packet = dequeue(i)
 			// if pkt.synFlag == 1 {
 			// 	addToBacklog(pkt)

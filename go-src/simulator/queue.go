@@ -5,5 +5,9 @@ func enqueue(pkt packet, i int) {
 }
 
 func dequeue(i int) packet {
-	return pktQueue[i].Next().(packet)
+	pkt := pktQueue[i].Next()
+	if pkt == nil {
+		pkt = NewPacket(0, "nil", -1, false)
+	}
+	return pkt.(packet)
 }
